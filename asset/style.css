@@ -1,0 +1,322 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* CSS Variables untuk konsistensi tema */
+:root {
+  --primary-color: #0077b6;
+  --secondary-color: #00b4d8;
+  --text-dark: #333333;
+  --text-light: #ffffff;
+  --background-light: #f8f9fa;
+  --background-white: #ffffff;
+  --border-color: #dee2e6;
+  --shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Reset dan Base Style */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background-color: var(--background-light);
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--primary-color);
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: var(--secondary-color);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Header & Navigation */
+.header {
+  background-color: var(--background-white);
+  padding: 1rem 0;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--primary-color);
+}
+
+.nav-menu {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-link {
+  color: var(--text-dark);
+  font-weight: 600;
+}
+
+.nav-toggle {
+  display: none; /* Hidden on desktop */
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* Hero Section (Halaman Utama) */
+.hero {
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://source.unsplash.com/1600x900/?indonesia,landscape') no-repeat center center/cover;
+  color: var(--text-light);
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-content h2 {
+  font-size: 3rem;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-cta {
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.btn-cta:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-light);
+}
+
+/* Sections */
+.section {
+  padding: 4rem 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+/* Package Cards */
+.package-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.package-card {
+  background-color: var(--background-white);
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.package-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.package-card-content {
+  padding: 1.5rem;
+}
+
+.package-card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.package-card .price {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--primary-color);
+  margin: 1rem 0;
+}
+
+/* Destination Detail Page */
+.destination-header {
+  padding: 4rem 0;
+  background-color: var(--primary-color);
+  color: var(--text-light);
+  text-align: center;
+}
+
+.destination-header h1 {
+  font-size: 3rem;
+}
+
+.destination-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 3rem;
+  margin-top: 3rem;
+}
+
+.destination-main h3 {
+  color: var(--primary-color);
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+  margin-top: 2rem;
+}
+
+.destination-main ul {
+  list-style-position: inside;
+  padding-left: 1rem;
+}
+
+.destination-sidebar {
+  background-color: var(--background-white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 120px; /* header height + some space */
+}
+
+.destination-sidebar h3 {
+  margin-top: 0;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 1rem;
+}
+
+.detail-item i {
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.price-tag {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary-color);
+  text-align: center;
+  margin: 1.5rem 0;
+}
+
+/* Booking Form */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border: 1px solid var(--border-color);
+  border-radius: 5px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Footer */
+.footer {
+  background-color: var(--text-dark);
+  color: var(--text-light);
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.footer .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-nav {
+    display: flex;
+    gap: 1.5rem;
+    list-style: none;
+}
+
+.footer-nav a {
+    color: var(--text-light);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: var(--background-white);
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 0;
+    box-shadow: var(--shadow);
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .hero-content h2 {
+    font-size: 2rem;
+  }
+
+  .destination-content {
+    grid-template-columns: 1fr;
+  }
+}

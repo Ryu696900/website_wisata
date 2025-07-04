@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulir Pemesanan - Agen Wisata Indonesia</title>
+  <link rel="stylesheet" href="/asset/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <a href="index.html" class="logo">Agen Wisata</a>
+      <nav>
+        <a href="paket.html" class="nav-link">Kembali ke Semua Paket</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section">
+      <div class="container" style="max-width: 800px;">
+        <h2 class="section-title">Formulir Pemesanan Paket</h2>
+        <form action="#" method="POST">
+          <div class="form-group">
+            <label for="package">Pilih Paket Wisata</label>
+            <select id="package" name="package" required>
+              <option value="">-- Pilih Destinasi --</option>
+              <option value="bali">Paket Bali - Rp 2.500.000</option>
+              <option value="raja_ampat">Paket Raja Ampat - Rp 6.500.000</option>
+              <option value="bromo">Paket Gunung Bromo - Rp 950.000</option>
+              <option value="labuan_bajo">Paket Labuan Bajo - Rp 4.900.000</option>
+              <option value="tanah_toraja">Paket Tana Toraja - Rp 3.500.000</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="name">Nama Lengkap</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Alamat Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="phone">Nomor Telepon (WhatsApp)</label>
+            <input type="tel" id="phone" name="phone" required>
+          </div>
+          <div class="form-group">
+            <label for="pax">Jumlah Peserta</label>
+            <input type="number" id="pax" name="pax" min="1" value="1" required>
+          </div>
+          <div class="form-group">
+            <label for="date">Tanggal Keberangkatan</label>
+            <input type="date" id="date" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="notes">Catatan Tambahan</label>
+            <textarea id="notes" name="notes" rows="4"></textarea>
+          </div>
+          <button type="submit" class="btn-cta" style="width: 100%;">Kirim Permintaan</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>&copy; 2025 Agen Wisata Indonesia. Semua hak dilindungi.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
